@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Linked {
+            constructor(data) {
+                this.head = {
+                    val: data,
+                    next: null
+                }
+                this.tail = this.head
+                this.size = 0;
+            };
+
+            insertNode(node) {
+                let newNode = {
+                    val: node,
+                    next: null
+                }
+                this.tail.next = newNode;
+                this.tail = newNode
+                this.size++;
+            }
+            traversing() {
+                let i = 0;
+                let curr = this.head;
+                while (i < this.size) {
+                    console.log(curr);
+                    curr = curr.next;
+                    i++;
+                }
+            }
+
+            deletNode(n) {
+                if (i === 1) {
+                    this.head = this.head.next;
+                } else {
+
+                }
+            }
+        }
+
+
+        let list = new Linked(5);
+        list.insertNode(15)
+        list.insertNode(25)
+        list.insertNode(35)
+        list.insertNode(45)
+        list.insertNode(55)
+        list.traversing()
+        list.deletNode
+
+
+        class Node {
+            constructor(val) {
+                this.val = val;
+                this.next = null;
+            }
+        }
+
+        let list1 = new Node('a')
+        let list2 = new Node('b')
+        let list3 = new Node('c')
+        let list4 = new Node('d')
+        list1.next = list2;
+        list2.next = list3;
+        list3.next = list4;
+
+
+        function printList(head) {
+            let curr = head;
+            while (curr !== null) {
+                console.log(curr.val);
+                curr = curr.next;
+            }
+
+        }
+        printList(list1)
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function print_subarray(arr, length) {
+            let max = 0;
+            for (let i = 0; i < arr.length; i++) {
+                let temp = 0;
+                for (let j = i; j < arr.length; j++) {
+                    temp += arr[j];
+                    if (temp > max) {
+                        max = temp;
+                    }
+                }
+            }
+            return max;
+
+        }
+        console.log(print_subarray([5, 2, -4, -5, 3, -1, 2, 3, 1]));
+
+    </script>
+
+</body>
+
+</html>

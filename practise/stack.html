@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        let stack = []
+        let size = stack.length;
+
+        function push(val) {
+            stack[size] = val
+            size++;
+        }
+
+        function pop() {
+            let lastItem = stack[size - 1]
+            size--;
+            stack.length = size;
+            return lastItem;
+        }
+
+        function reverseStr(item) {
+            for (let i = 0; i < item.length; i++) {
+                push(item[i])
+            }
+
+            for (let i = 0; i < item.length; i++) {
+                item[i] = pop();
+            }
+        }
+
+        let str = "anil";
+        str = str.split('')
+
+        console.log(reverseStr(str));
+
+        console.log(str.join(''));
+        console.log(stack);
+
+
+    </script>
+
+</body>
+
+</html>

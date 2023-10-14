@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function findColumn(n) {
+
+        //     let ans = "";
+        //     while (n > 0) {
+        //         let remainder = (n - 1) % 26  //index last check
+        //         ans = String.fromCharCode(65 + remainder) + ans;
+        //         n = Math.floor((n - 1) / 26)
+        //     }
+        //     return ans;
+        // }
+        // console.log(findColumn(152));
+
+        function findColNum(str) {
+            let sum = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                sum = (sum * 26) + (str.charCodeAt(i) - 64)
+            }
+
+            return sum;
+
+        }
+
+        console.log(findColNum(('ABC')));
+
+
+
+    </script>
+
+</body>
+
+</html>

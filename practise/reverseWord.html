@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverseWords(s) {
+            let reversedStr = '';
+            let word = '';
+            let inWord = false;
+
+
+            for (let i = 0; i < s.length; i++) {
+                const char = s[i];
+
+
+                if (char !== ' ') {
+                    word += char;
+                    inWord = true;
+                
+                } else if (inWord) {
+
+                    if (reversedStr !== '') {
+                        reversedStr = ' ' + reversedStr;
+                    }
+                    reversedStr = word + reversedStr;
+                    word = '';
+                    inWord = false;
+                }
+            }
+
+
+            if (inWord) {
+                if (reversedStr !== '') {
+                    reversedStr = ' ' + reversedStr;
+                }
+                reversedStr = word + reversedStr;
+            }
+
+            return reversedStr;
+        }
+
+
+
+
+
+        const s1 = "the sky is blue";
+        const s2 = "  hello world  ";
+        const s3 = "a good   example";
+
+        const output1 = reverseWords(s3);
+        
+      console.log(output1);
+
+
+    </script>
+
+</body>
+
+</html>

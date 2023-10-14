@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+        function maxChar(s) {
+
+            let max = {};
+            let word = new String();
+            let count = 0;
+
+            for (let char of s) {
+                max[char] = (max[char] || 0) + 1;
+                if (max[char] > count) {
+                    word = char;
+                    count = max[char]
+                }
+            }
+            
+            return word;
+        }
+        console.log(maxChar("prahalad"));
+
+    </script>
+</body>
+
+</html>

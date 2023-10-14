@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a1 = ['a', 'b', 'c', 'd']
+        let a2 = ['b', 'a', 'c']
+
+        for (let i = 0; i < a1.length; i++) {
+
+
+            for (let j = 0; j < a2.length; j++) {
+                console.log('hi');
+                if (a1[i] === a2[j]) {
+                    console.log(i);
+                }
+            }
+
+        }
+
+        function decode(s) {
+            let stackNumber = [];
+            let stringStack = [];
+            let temp = "";
+            let ans = "";
+
+            for (let char of s) {
+                if (!isNaN(char)) {
+                    temp = `${temp}${char}`
+
+                } else if (char === "[") {
+                    stackNumber.push(temp);
+                    temp = "";
+                    stringStack.push(ans)
+                    ans = "";
+                } else if (char === "]") {
+
+                    ans = stringStack.pop() + ans.repeat(stackNumber.pop())
+
+                } else {
+                    ans += char
+                }
+
+            }
+
+            return ans;
+        }
+
+        console.log(decode("2[a]2[bb]"));
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let company = {
+        //     sales: [{
+        //         name: 'John',
+        //         salary: 1000
+        //     }, {
+        //         name: 'Alice',
+        //         salary: 1600
+        //     }],
+
+        //     development: {
+        //         sites: [{
+        //             name: 'Peter',
+        //             salary: 2000
+        //         }, {
+        //             name: 'Alex',
+        //             salary: 1800
+        //         }],
+
+        //         internals: [{
+        //             name: 'Jack',
+        //             salary: 1300
+        //         }],
+        //         internals: [{
+        //             name: 'back',
+        //             salary: 1800
+        //         }],
+        //     },
+        // };
+
+        // function sumOfSalary(department) {
+        //     if (Array.isArray(department)) {
+        //         return department.reduce((prev, curr) => {
+        //             return prev + curr.salary
+        //         }, 0)
+        //     }
+
+
+        //     let sum = 0;
+        //     for (let newData of Object.values(department)) {
+        //         sum += sumOfSalary(newData)
+        //     }
+
+        //     return sum;
+
+
+        // }
+        // console.log(sumOfSalary(company));
+
+
+
+
+
+
+
+
+
+        function StringRev(text) {
+            if (text.length == 1) {
+                return text;
+            }
+
+            return text.slice(-1) + StringRev(text.slice(0, -1));
+
+        }
+
+        let data = StringRev('prahalad');
+        console.log(data);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function maxDrinks(numCoconuts, numEmptyShells) {
+
+            let totalshell = numCoconuts;
+            let EmptyShells = numCoconuts;
+
+
+            while (EmptyShells >= numEmptyShells) {
+                const newshell = Math.floor(EmptyShells / numEmptyShells);
+
+                EmptyShells = EmptyShells % numEmptyShells + newshell;
+
+                totalshell += newshell;
+
+            }
+
+            return totalshell;
+
+        }
+
+
+        console.log(maxDrinks(9, 3));
+
+
+    </script>
+
+</body>
+
+</html>

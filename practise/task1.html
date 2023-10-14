@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* function printEven(n){
+         
+             for(let i=2; i<n; i++){
+                 if(i % 2 === 0){
+                  console.log(i);
+                 }
+             }
+ 
+         }
+         console.log(printEven(10));
+         */
+
+        /*  function printSquare(n){
+  
+              for(let i=0; i<Math.sqrt(n); i++){
+                  console.log(i*i);
+              }
+          }
+          printSquare(49);
+          */
+
+        /* function printNumber(n){
+            for(let i=0; i<=n; i++){
+                if(i % 5 !== 0){
+                    console.log(i);
+                }
+            }
+        }
+        printNumber(7) */
+
+
+
+        /*  function printDigit(n) {
+              let number = n.toString()
+              for (let i = number.length - 1; i >= 0; i--) {
+                  console.log(number[i]);
+              }
+          }
+          printDigit(8910)
+  
+          */
+
+
+
+        /*     function Armstrong(n) {
+                 let number = n.toString()
+                 let ans = 0;
+                 for (let i = 0; i < number.length; i++) {
+                     let output = parseInt(number[i])
+                     ans += output ** 3
+                 }
+                 if (ans === n) {
+                     return true;
+                 } else {
+                     return false;
+                 }
+             }
+     
+             console.log(Armstrong(123));
+     
+          */
+
+
+        /* function printCubic(n) {
+ 
+             for (let i = 1; i <= n; i++) {
+                 let num = i ** 3; // Cubing the number
+                 if (num <= n) {
+                     console.log(num);
+                 } else {
+                     break;
+                 }
+             }
+ 
+         }
+ 
+         console.log(printCubic(125));
+         */
+
+
+        /* function print_pattern() {
+            
+             for (let i = 1; i <= 5; i++) {
+                 let pattern = '*'.repeat(i) + ' '.repeat(5 - i) + '*'.repeat(i);
+                 console.log(pattern);
+             }
+ 
+         }
+         print_pattern();
+         */
+
+
+        /* function storeNumber(n) {
+ 
+             let output = [];
+             for (let i = 1; i <= n; i++) {
+                 output.push(i)
+             }
+             return output;
+         }
+         console.log(storeNumber(8));
+         */
+
+        /*  let arr = [1, 2, 3, 4, 5]
+  
+          for (let i = 0; i < arr.length; i++) {
+              let temp = ""
+              for (let j = i; j < arr.length; j++) {
+                  temp += arr[j];
+                  document.write(temp + '<br>')
+              }
+          }
+  
+          */
+
+        /*    function findNumber(arr) {
+    
+                let sum = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    sum += arr[i]
+                }
+    
+                let actual = 0;
+                for (let i = 0; i < arr.length + 2; i++) {
+                    actual += arr[i]
+    
+                }
+    
+                return sum - actual
+    
+            }
+            console.log(findNumber([3, 4, 1]));
+    
+            */
+
+        function sortedArray(num1, num2) {
+            let array = [...num1, ...num2].sort((a, b) => a - b);
+            let n = array.length
+            let mid = n % 2 === 0 ? (array[n / 2] + array[n / 2 - 1]) / 2 : array[Math.floor(n / 2)]
+            return mid;
+        }
+
+
+        console.log(sortedArray([3, 2, 4], [-2, -1]));
+        
+hour the client all about your work more the ben
+
+
+    </script>
+
+</body>
+
+</html>
