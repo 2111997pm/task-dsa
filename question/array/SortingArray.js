@@ -16,6 +16,7 @@ function bubbleSort(arr) {
 console.log(bubbleSort([4, 3, 2, 5, 1]));
 
 */
+/*
 
 function insertionSort(arr) {
   let n = arr.length;
@@ -33,3 +34,24 @@ function insertionSort(arr) {
   return arr;
 }
 console.log(insertionSort([4, 3, 2, 5, 1]));
+*/
+
+function selectionSort(arr) {
+  let min;
+  let minMum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    min = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    let temp = arr[min];
+    arr[min] = arr[i];
+    arr[i] = temp;
+  }
+
+  return arr;
+}
+
+console.log(selectionSort([4, 3, 2, 5, 1]));

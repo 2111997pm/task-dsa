@@ -24,7 +24,6 @@ printSeris(125)
 printEvenNumer(10)
 */
 
-
 // print strar
 
 // *****
@@ -42,7 +41,6 @@ for (let i = 0; i <= 5; i++) {
 }
 
 */
-
 
 // print following Pattern;
 
@@ -74,14 +72,11 @@ for (let i = 0; i <= 5; i++) {
 
 */
 
-
 // *    *
 // **   **
 // ***  ***
 // **** ****
 // **********
-
-
 
 /*
 function print_pattern() {
@@ -97,5 +92,20 @@ print_pattern();
 */
 
 
+1
+22
+333
+4444
+55555
+/*
+function print_pattern() {
 
-
+  for (let row = 1; row <= 5; row++) {
+    for(let j=1; j<=row; j++){
+        document.write(row)
+    }
+    document.write('<br>')
+  }
+}
+print_pattern(5)
+*/
