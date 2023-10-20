@@ -18,14 +18,14 @@ console.log(rotateArray([-1,-100,3,99], 2));
 */
 
 function rotateArray(nums, k) {
-    const n = nums.length; // Get the length of the array
-  
-    for (let i = 0; i < k; i++) { // Outer loop runs k times for k steps of rotation
-      const lastElement = nums.pop(); // Pop the last element
-  
-      nums.unshift(lastElement); // Insert the popped element at the beginning
-    }
-    return nums
+  const n = nums.length;
+
+  for (let i = 0; i < k; i++) {
+    const lastElement = nums.pop();
+
+    nums.unshift(lastElement);
   }
-  console.log(rotateArray([1, 2, 3, 4, 5, 6, 7], 3));
-console.log(rotateArray([-1,-100,3,99], 2));
+  return nums;
+}
+console.log(rotateArray([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(rotateArray([-1, -100, 3, 99], 2));
