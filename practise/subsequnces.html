@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function subSequnces(str) {
+            if (str.length === 0) return [[]];
+
+            let first = str[0];
+            let rest = str.slice(1);
+            // console.log('rest param',rest);
+            let combination = subSequnces(rest);
+            let array = [];
+            
+            // console.log('combination', combination);
+            combination.forEach(function(data){
+                let withFirst = [...data,first];
+                array.push(withFirst)
+            })
+            // console.log('getting array',array);
+            return [...array,...combination]
+
+        }
+        console.log(subSequnces(['a', 'b', 'c']));
+
+
+
+    </script>
+
+</body>
+
+</html>
