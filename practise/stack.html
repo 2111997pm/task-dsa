@@ -6,50 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-
-</style>
 
 <body>
-
     <script>
 
-        let stack = []
-        let size = stack.length;
+        let array = [12, 13, 14, 15, 16, 17];
+        let element = 50;
+        index = 3;
+        for (let i = 0; i < array.length; i++) {
 
-        function push(val) {
-            stack[size] = val
-            size++;
-        }
-
-        function pop() {
-            let lastItem = stack[size - 1]
-            size--;
-            stack.length = size;
-            return lastItem;
-        }
-
-        function reverseStr(item) {
-            for (let i = 0; i < item.length; i++) {
-                push(item[i])
+            array[i] = array[i+1]
+            if (i >= index) {
+                if (i === index) {
+                    array[i] = element;
+                }
             }
 
-            for (let i = 0; i < item.length; i++) {
-                item[i] = pop();
-            }
         }
+        console.log(array);
 
-        let str = "anil";
-        str = str.split('')
 
-        console.log(reverseStr(str));
-
-        console.log(str.join(''));
-        console.log(stack);
 
 
     </script>
-
 </body>
 
 </html>

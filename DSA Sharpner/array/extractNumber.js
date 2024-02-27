@@ -1,4 +1,3 @@
-
 function extractNumber(str) {
   let number = [];
   let ans = "";
@@ -16,8 +15,6 @@ function extractNumber(str) {
 
 console.log(extractNumber("abc334v44d"));
 console.log(extractNumber("abv345fjjf123tyir45jf6th"));
-
-
 
 /*
 var extract_number = function (str) {

@@ -1,31 +1,24 @@
 function findFine(car, fine, date) {
-
-    let total = 0;
-    for (let i = 0; i < car.length; i++) {
-        if (date % 2 === 0) {
-            if (car[i] % 2 !== 0) {
-                total += fine[i]
-            }
-
-        } else {
-            if (car[i] % 2 === 0) {
-
-                total += fine[i]
-            }
-        }
+  let total = 0;
+  for (let i = 0; i < car.length; i++) {
+    if (date % 2 === 0) {
+      if (car[i] % 2 !== 0) {
+        total += fine[i];
+      }
+    } else {
+      if (car[i] % 2 === 0) {
+        total += fine[i];
+      }
     }
-    return total;
-
+  }
+  return total;
 }
 
-
-let car = [2222, 2223, 2224]
-let fine = [200, 300, 400]
-let date = 8
+let car = [2222, 2223, 2224];
+let fine = [200, 300, 400];
+let date = 8;
 
 console.log(findFine(car, fine, date));
-
-
 
 /*
 
