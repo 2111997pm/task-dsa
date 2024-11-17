@@ -1,17 +1,13 @@
-function findMissing(arr) {
-    let n = arr.length + 1;
+// # 268
 
-    let sum = (n * (n + 1)) / 2
-    let actualsum = 0;
+const missingNumber = function (nums) {
+  const expectedsum = Array.from(
+    {length: nums.length + 1 },
+    (_, i) => i
+  ).reduce((a, b) => a + b, 0);
+  const actualSum = nums.reduce((a, b) => a + b, 0);
 
-    for (let i = 0; i < arr.length; i++) {
+  return expectedsum - actualSum;
+};
 
-        actualsum += arr[i]
-
-    }
-    return sum - actualsum
-
-}
-
-
-console.log(findMissing([1, 4, 3]));
+console.log(missingNumber([1,0, 2, 4]));
